@@ -1,23 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Col, Container, Row } from 'reactstrap'
-import './Header.scss'
+import { Col, Container, Row } from 'reactstrap';
+import './Header.scss';
 
 Header.propTypes = {};
 
-function Header(props) {
+function Header() {
   return (
     <header className="header">
       <Container>
         <Row className="justify-content-between">
           <Col xs="auto">
-            <a 
-              className="header_link header_title"
-              href="https://www.youtube.com/channel/UClwFaSiwuvN0TiOpWOF-BlQ"
+            <a
+              className="header__link header__title"
+              href="https://youtube.com/easyfrontend"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Pham Huu Huy
+              Easy Frontend
             </a>
           </Col>
 
