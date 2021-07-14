@@ -4,7 +4,7 @@ import PhotoList from 'features/Photo/components/PhotoList';
 import { removePhoto } from 'features/Photo/photoSlice';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
 
@@ -12,12 +12,14 @@ MainPage.propTypes = {};
 
 function MainPage(props) {
   const dispatch = useDispatch()
+  const history = useHistory()
 
   const photos = useSelector(state => state.photos)
   console.log('List of photos: ', photos)
 
   const handlePhotoEditClick = (photo) =>{
     console.log("edit", photo);
+    history.push(`/photos/${photo.id}`)
   }
 
   const handlePhotoRemoveClick = (photo) =>{
